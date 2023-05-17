@@ -37,4 +37,4 @@ Deploy a function app into a different RG; stack would be python 3.10
 
 Logic App needs to look like this:
 
-![Logic App](docs/LogicApps.png)
+![Logic App](Docs/LogicApps.png)
