@@ -22,18 +22,20 @@ In the main python file you need to update the following variables:
 
 Local pre-reqs for all this:
 
-Visual Studio Code
-Azure Functoin Tools - version 4
-Python 3.10
-Fucntion Apps Extension
-Logic Apps Extenson
-Azure Storage Explorer
+* Visual Studio Code
+* Azure Functinn Tools - version 4
+* Python 3.10
+* Fucntion Apps Extension
+* Logic Apps Extenson
+* Azure Storage Explorer
+
 
 Azure Target pre-reqs:
 
-Deploy the OpenAI demo to get the basics in place
-Deploy a logic app
-Deploy a function app into a different RG; stack would be python 3.10
+* Deploy the OpenAI demo to get the basics in place
+* Deploy a logic app
+* Deploy a function app into a different RG; stack would be python 3.10
+
 
 Logic App needs to look like this:
 
