@@ -24,9 +24,11 @@ In the main python file you need to update the following variables:
     formrecognizerservice = "FORM RECOGNIZER SERVIICE"
     formrecognizer_creds = AzureKeyCredential(formrecognizerkey)
 
+### Prerequisites
+
 Local pre-reqs for all this:
 
-* Visual Studio Code
+* Visual Studio Code https://code.visualstudio.com/
 * Azure Functinn Tools - version 4
 * Python 3.10
 * Fucntion Apps Extension
