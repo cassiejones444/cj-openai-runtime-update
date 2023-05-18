@@ -53,7 +53,7 @@ In the main python file you need to update the following variables:
     formrecognizerkey = "FORM RECOGNIZER KEY"
     formrecognizerservice = "FORM RECOGNIZER SERVIICE"
 
-Test the function app locally; all things being equal it should grab a file from the input container (use Azure Storage Explorer to put it there), split it into a bunch of PDFs in the content container that the demo OpenAI deploy created, and then index it ready for OpenAI to search. When you run the HttpTrigger locally change the body of the trigger to { "filename": "<NAME OF UPLOADED DOCUMENT.pdf" }
+Test the function app locally; all things being equal it should grab a file from the input container (use Azure Storage Explorer to put it there), split it into a bunch of PDFs in the content container that the demo OpenAI deploy created, and then index it ready for OpenAI to search. When you run the HttpTrigger locally change the body of the trigger to { "filename": "<NAME OF UPLOADED DOCUMENT>.pdf" }
     
 ## Things to Change - Azure
     
