@@ -1,8 +1,12 @@
 # cj-openai-runtime-update
 
+## Features
+
 Code repo for a python file script that can take a file from an Azure Storage Account, break a pdf into individual pages, run form rec across it and then update a search index.
 
 Expectation is that the openai demo has already been deployed and this hangs off all that.
+
+## Things to Change
 
 In the main python file you need to update the following variables:
 
