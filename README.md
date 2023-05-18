@@ -60,10 +60,12 @@ Test the function app locally; all things being equal it should grab a file from
 For the rest of the Azure components you will need to make it work end to end in Azure:
 
 * Create a new resource group
-* Deploy a Function App with the Python Stack and version 3.10 of Python
+* Deploy a Function App with the Python Stack and version 3.10 of Python ibnto the new RG
 * Deploy from Visual Studio Code deploy the function app to the Azure Function App
-* Deploy a Logic App; this will have a blob trigger, pass the info 
+* Deploy a Logic App into the new RG
 
 Logic App needs to look like this:
 
 ![Logic App](Docs/LogicApps.png)
+    
+Test by uploading a new file to the input container; again, all things being equal it will grab that file and do the needful so that in about 90 seconds OpenAI can query the new data.
