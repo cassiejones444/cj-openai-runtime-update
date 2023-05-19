@@ -32,7 +32,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     output_container_name = "content"
     #filename = "2014AnnualReport.pdf"
     filename = req_body.get('filename')
-    category = "Qantas"
+    category = "Jeff"
     searchservice = os.getenv('searchservicefromKV')
     searchkey = os.getenv('searchkeyfromKV')
     search_creds = AzureKeyCredential(searchkey)
