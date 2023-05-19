@@ -85,7 +85,7 @@ As I don't like repeating myself, or others, this is a really good intro on how 
     
   https://servian.dev/accessing-azure-key-vault-from-python-functions-44d548b49b37
     
-Follow that to setup the KeyVault and understand how to put the variables in the Applicaiton Settings on the funciton. You just then need to change the variables to be whatever you made them in KeyVault. My examples are below:
+Follow that to setup the KeyVault and understand how to put the variables in the Application Settings on the funciton. You just then need to change the variables to be whatever you made them in KeyVault. My examples are below:
     
     connection_string = os.getenv('connectionstringfromKV')
     searchservice = os.getenv('searchservicefromKV')
