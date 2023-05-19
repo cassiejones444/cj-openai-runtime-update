@@ -30,7 +30,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     connection_string = os.getenv('connectionstringfromKV')
     input_container_name = "input"
     output_container_name = "content"
-    #filename = "2014AnnualReport.pdf"
     filename = req_body.get('filename')
     category = "Jeff"
     searchservice = os.getenv('searchservicefromKV')
