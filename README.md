@@ -60,12 +60,40 @@ Test the function app locally; all things being equal it should grab a file from
 For the rest of the Azure components you will need to make it work end to end in Azure:
 
 * Create a new resource group
-* Deploy a Function App with the Python Stack and version 3.10 of Python ibnto the new RG
+* Deploy a Function App with the Python Stack and version 3.10 of Python into the new RG
 * Deploy from Visual Studio Code deploy the function app to the Azure Function App
+    
+You can test the funciton by running the code; first upload a file to the input directory, and then put the following in the body response:
+    
+   {
+    "filename": "<NAME OF FILE UPLOADED TO INPUT CONTAINER>"
+    } 
+    
 * Deploy a Logic App into the new RG
 
 Logic App needs to look like this:
 
 ![Logic App](Docs/LogicApps.png)
     
-Test by uploading a new file to the input container; again, all things being equal it will grab that file and do the needful so that in about 90 seconds OpenAI can query the new data.
+Test by uploading another file to the input container; again, all things being equal it will grab that file and do the needful so that in about 90 seconds OpenAI can query the new data.
+    
+## Azure KevVault Enhancements
+
+Of course having secrets and things in raw code isn't good practice, so the following changes can be made to extract the secrets from the code and put in an Azure KeyVault.
+    
+As I don't like repeating myself or others, this is a really good intro on how to use Azure Functions with a Key Vault:
+    
+  https://servian.dev/accessing-azure-key-vault-from-python-functions-44d548b49b37
+    
+Follow that to setup the KeyVault and understand how to put the variables in the Applicaiton Settings on the funciton. You just then need to change the variables to be:
+    
+    connection_string = os.getenv('connectionstringfromKV')
+    searchservice = os.getenv('searchservicefromKV')
+    searchkey = os.getenv('searchkeyfromKV')
+    index = os.getenv('indexfromKV')
+    formrecognizerkey = os.getenv('formrecognizerkeyfromKV')
+    formrecognizerservice = os.getenv('formrecognizerservicefromKV')
+    
+This will then allow you to secure the keys and the like in a KeyVault, which also makes it easier to change the back end resources as you do it in the Secrets rather than the code.
+    
+
