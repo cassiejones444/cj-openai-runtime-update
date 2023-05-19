@@ -81,11 +81,11 @@ Test by uploading another file to the input container; again, all things being e
 
 Of course having secrets and things in raw code isn't good practice, so the following changes can be made to extract the secrets from the code and put in an Azure KeyVault.
     
-As I don't like repeating myself or others, this is a really good intro on how to use Azure Functions with a Key Vault:
+As I don't like repeating myself, or others, this is a really good intro on how to use Azure Functions with a Key Vault:
     
   https://servian.dev/accessing-azure-key-vault-from-python-functions-44d548b49b37
     
-Follow that to setup the KeyVault and understand how to put the variables in the Applicaiton Settings on the funciton. You just then need to change the variables to be:
+Follow that to setup the KeyVault and understand how to put the variables in the Applicaiton Settings on the funciton. You just then need to change the variables to be whatever you made them in KeyVault. My examples are below:
     
     connection_string = os.getenv('connectionstringfromKV')
     searchservice = os.getenv('searchservicefromKV')
