@@ -77,7 +77,7 @@ Logic App needs to look like this:
     
 Test by uploading another file to the input container; again, all things being equal it will grab that file and do the needful so that in about 90 seconds OpenAI can query the new data.
     
-## Azure KevVault Enhancements
+## Azure KeyVault Enhancements
 
 Of course having secrets and things in raw code isn't good practice, so the following changes can be made to extract the secrets from the code and put in an Azure KeyVault.
     
